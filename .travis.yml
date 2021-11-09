@@ -1,9 +1,11 @@
 language: python
+job:
+- arch: amd64
+- virt: lxd
+  group: edge
+  arch: arm64-graviton2
 python:
 - '3.8'
-arch:
-  - amd64
-  - arm64
 install: make install
 script: make test
 branches:
