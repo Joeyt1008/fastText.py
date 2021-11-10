@@ -7,7 +7,9 @@ job:
 python:
 - '3.8'
 install: make install
-script: make test
+script: 
+- travis_wait 50
+- make test
 branches:
   only:
   - master
